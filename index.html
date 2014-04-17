@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Beaufort Water Festival</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="cleartype" content="on">
+		<!-- External CSS -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />-->
+		<!-- External JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<!--<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+		<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4Qr46NogUpSkGpzK9__ezXK_BbYQ9_WY&sensor=true" type="text/javascript"></script>-->
+		<!--<script src="https://maps.googleapis.com/maps/api/js?sensor=true" type="text/javascript"></script>-->
+		<script src="js/main.js"></script>
+		<script src="phonegap.js"></script>
+		<!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+		<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+	</head>
+	<body>
+
+		<div id="home_page" class="active_page">
+
+			<div class="logo_holder">
+				<img src="img/logo.png" />
+			</div>
+
+			<div id="home_button_container">
+
+				<div class="button_row">
+
+					<div class="left" onclick="open_link('http://bftwaterfestival.com/news/');">
+						<img src="img/radio_tower.png" /><br />
+						<span class="button_text">News</span>
+					</div>
+
+					<div class="right" onclick="open_link('http://bftwaterfestival.com/festival-schedule/');">
+						<img src="img/calendar.png" /><br />
+						<span class="button_text">Festival Schedule</span>
+					</div>
+
+					<div style="clear:both;"></div>
+
+				</div>
+
+				<div class="button_row">
+
+					<div class="left" onclick="open_link('http://bftwaterfestival.com/shop/');">
+						<img src="img/shopping_bag.png" /><br />
+						<span class="button_text">Tickets &amp;<br />Merchandise</span>
+					</div>
+
+					<div class="right" onclick="open_link('http://bftwaterfestival.com/contact-us/');">
+						<img src="img/mail_closed.png" /><br />
+						<span class="button_text">Contact</span>
+					</div>
+
+					<div style="clear:both;"></div>
+
+				</div>
+
+				<div class="button_row" style="margin-bottom:25px;min-height:25px;">
+					<div class="left" onclick="open_link('https://www.facebook.com/BFTH20FEST');">
+						<img style="width:30px;height:30px;opacity:0.5;" src="img/fb-icon.png" />
+					</div>
+					<div class="right" onclick="open_link('https://twitter.com/BeaufortH2OFest');">
+						<img style="width:30px;height:30px;opacity:0.5;" src="img/twitter-icon.png" />
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div id="page_header_title">
+			<div id="page_header_content" class="title_text">
+			</div>
+		</div>
+
+		<div id="nav_bar">
+
+			<div class="img_div">
+				<a href="javascript:open_page('home');"><img src="img/home.png" /></a>
+			</div>
+
+			<div class="img_div">
+				<a href="javascript:open_page('map');"><img src="img/map_marker.png" /></a>
+			</div>
+
+			<div class="img_div">
+				<a href="javascript:open_page('notification');"><img class="notification_img_toggle" src="img/mail_closed.png" /></a>
+			</div>
+
+			<div class="img_div">
+				<a href="javascript:open_page('report');"><img src="img/scanner.png" /></a>
+			</div>
+
+		</div>
+
+	</body>
+</html>
+\
