@@ -3,6 +3,12 @@ jQuery(document).ready(function() {
 	//fix heights/widths
 	var window_height = jQuery(window).height();
 	var window_width = jQuery(window).width();
+	jQuery('#festival_schedule_page').css('height', (window_height - 52) - (window_height * 0.075)); //52 for nav bar, 7% for top bar
+	jQuery('#festival_schedule_page').css('width', (window_width - 10)); //52 for nav bar, 7% for top bar
+	//jQuery('#festival_schedule_page').css('padding-top', window_height * 0.07);
+	jQuery('#page_header_content').css('margin-top', (window_height * 0.1 * 0.1)); //10% * 1/10 = margin-top/bottom
+	jQuery('#page_header_content').css('font-size', ((window_height * 0.1) - (window_height * 0.1 * 0.2)) * 0.35); //10% - margin-top + bot
+
 
 });
 
@@ -32,6 +38,25 @@ function open_page(page) {
 				jQuery('#nav_bar').hide('slide', { direction: 'down' });
 				jQuery('#right_menu_container').hide();
 				jQuery('#page_header_title').hide('slide', { direction: 'up' });
+			break;
+
+			case 'festival_schedule':
+
+				show_loading();
+
+				jQuery.ajax({
+					url: 'http://bftwaterfestival.com/app-page',
+					type:'GET',
+					success: function(data) {
+						jQuery('#festival_schedule_page').html('');
+						jQuery('#festival_schedule_page').html(data);
+						hide_loading();
+					}
+				});
+
+				jQuery('#page_header_content').html('Festival Schedule');
+				jQuery('#page_header_title').show('slide', { direction: 'up' });
+				jQuery('#nav_bar').show('slide', { direction: 'down' });
 			break;
 
 			case 'map':
